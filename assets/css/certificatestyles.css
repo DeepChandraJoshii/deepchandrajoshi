@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&family=Rubik+Doodle+Shadow&family=Sevillana&family=Ubuntu:wght@300;400&display=swap');
+
+:root {
+    --Primary: #453b9c;
+    --Secondary: #19163b;
+    --header: #0b0a1a;
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --black: #000;
+    --span: #ea1538;
+    --button: #1fcc45;
+    --title: #363333;
+    --background1: rgb(221, 221, 19);
+    --background2: rgb(83, 30, 30);
+    --background3: rgb(19, 18, 18);
+    --background4: rgb(228, 165, 165);
+    --background5: rgb(65, 206, 65);
+    --background6: rgb(240, 169, 169);
+    --background7: rgb(65, 42, 42);
+    --background8: rgb(243, 168, 168);
+    --background9: rgb(185, 211, 72);
+    --background10: rgb(209, 181, 181);
+    --background11: rgb(134, 132, 132);
+    
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+header{
+    width: 100%;
+    background: #101010;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #d4cbcb;
+}
+
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 3rem;
+}
+
+.nav-link{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+
+.nav-logo {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #482ff7;
+}
+
+
+
+
+/* -------------Certificate------------- */
+.certificate img{
+    height: 550px;
+}
+
+.certificate_title{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    background-color: aqua;
+}
+
+.certificate_container{
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.certificate_container_details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.certificate{
+    background: #f8eded;
+}
+
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+/* -------------Certificate------------- */
+.certificate img{
+    height: 150px;
+    width: 200px;
+}
+
+.certificate_title{
+    font-size: 1rem;
+}
+
+.certificate_container_details{
+    font-size: 0.5rem;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+}
